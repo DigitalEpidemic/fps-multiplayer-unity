@@ -262,56 +262,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &532782350 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1790930587595894, guid: 463368a95f4bd8b43b14e2578d5f38a1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1717279152}
---- !u!114 &532782351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 532782350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3abf3dce737dd354a86119c6a5d470d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axis: 0
---- !u!114 &532782354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 532782350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4e59e291b8944449c908926acbe785, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 6.75
-  runSpeed: 10
-  crouchSpeed: 4
-  jumpSpeed: 8
-  gravity: 20
---- !u!1 &533914978 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1399392678051198, guid: 463368a95f4bd8b43b14e2578d5f38a1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1717279152}
---- !u!114 &533914980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533914978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3abf3dce737dd354a86119c6a5d470d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axis: 1
 --- !u!1001 &1717279152
 Prefab:
   m_ObjectHideFlags: 0
