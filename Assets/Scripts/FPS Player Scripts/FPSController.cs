@@ -36,6 +36,8 @@ public class FPSController : MonoBehaviour {
     private Vector3 default_CameraPosition;
     private float cameraHeight;
 
+    private FPSPlayerAnimations playerAnimations;
+
     void Start () {
         // Find is not optimal
         firstPerson_View = transform.Find ("FPS View").transform;
@@ -46,6 +48,8 @@ public class FPSController : MonoBehaviour {
         rayDistance = charController.height * 0.5f + charController.radius;
         default_ControllerHeight = charController.height;
         default_CameraPosition = firstPerson_View.localPosition;
+
+        playerAnimations = GetComponent<FPSPlayerAnimations> ();
     }
 
     void Update () {
@@ -96,6 +100,7 @@ public class FPSController : MonoBehaviour {
         isGrounded = (charController.Move (moveDirection * Time.deltaTime) & CollisionFlags.Below) != 0;
         isMoving = charController.velocity.magnitude > 0.15f;
 
+        HandleAnimations ();
     }
 
     void PlayerCrouchingAndSprinting () {
@@ -123,6 +128,8 @@ public class FPSController : MonoBehaviour {
                 speed = walkSpeed;
             }
         }
+
+        playerAnimations.PlayerCrouch (isCrouching);
     }
 
     bool CanGetUp () {
@@ -156,6 +163,8 @@ public class FPSController : MonoBehaviour {
                 if (CanGetUp ()) {
                     isCrouching = false;
 
+                    playerAnimations.PlayerCrouch (isCrouching);
+
                     StopCoroutine (MoveCameraCrouch ());
                     StartCoroutine (MoveCameraCrouch ());
                 }
@@ -163,6 +172,15 @@ public class FPSController : MonoBehaviour {
             } else {
                 moveDirection.y = jumpSpeed;
             }
+        }
+    }
+
+    void HandleAnimations () {
+        playerAnimations.Movement (charController.velocity.magnitude);
+        playerAnimations.PlayerJump (charController.velocity.y);
+
+        if (isCrouching && charController.velocity.magnitude > 0f) {
+            playerAnimations.PlayerCrouchWalk (charController.velocity.magnitude);
         }
     }
 
