@@ -16,6 +16,8 @@ public class FPSPlayerAnimations : MonoBehaviour {
     private string CROUCH_SHOOT = "CrouchShoot";
     private string RELOAD = "Reload";
 
+    public RuntimeAnimatorController animController_SingleHand, animController_DualHand;
+
     void Awake () {
         anim = GetComponent<Animator> ();
     }
@@ -46,6 +48,14 @@ public class FPSPlayerAnimations : MonoBehaviour {
 
     public void Reload () {
         anim.SetTrigger (RELOAD);
+    }
+
+    public void ChangeController (bool isSingleHand) {
+        if (isSingleHand) {
+            anim.runtimeAnimatorController = animController_SingleHand;
+        } else {
+            anim.runtimeAnimatorController = animController_DualHand;
+        }
     }
 
 } // FPSPlayerAnimations

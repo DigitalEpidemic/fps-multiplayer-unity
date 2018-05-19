@@ -64,6 +64,7 @@ public class FPSController : MonoBehaviour {
 
     void Update () {
         PlayerMovement ();
+        SelectWeapon ();
     }
 
     void PlayerMovement () {
@@ -208,6 +209,50 @@ public class FPSController : MonoBehaviour {
 
         if (Input.GetKeyDown (KeyCode.R)) {
             playerAnimations.Reload ();
+        }
+    }
+
+    void SelectWeapon () {
+        if (Input.GetKeyDown (KeyCode.Alpha1)) {
+            if (!weaponManager.weapons[0].activeInHierarchy) {
+                for (int i = 0; i < weaponManager.weapons.Length; i++) {
+                    weaponManager.weapons[i].SetActive (false);
+                }
+
+                currentWeapon = null;
+                weaponManager.weapons[0].SetActive (true);
+                currentWeapon = weaponManager.weapons[0].GetComponent<FPSWeapon> ();
+
+                playerAnimations.ChangeController (true);
+            }
+        }
+
+        if (Input.GetKeyDown (KeyCode.Alpha2)) {
+            if (!weaponManager.weapons[1].activeInHierarchy) {
+                for (int i = 0; i < weaponManager.weapons.Length; i++) {
+                    weaponManager.weapons[i].SetActive (false);
+                }
+
+                currentWeapon = null;
+                weaponManager.weapons[1].SetActive (true);
+                currentWeapon = weaponManager.weapons[1].GetComponent<FPSWeapon> ();
+
+                playerAnimations.ChangeController (true);
+            }
+        }
+
+        if (Input.GetKeyDown (KeyCode.Alpha3)) {
+            if (!weaponManager.weapons[2].activeInHierarchy) {
+                for (int i = 0; i < weaponManager.weapons.Length; i++) {
+                    weaponManager.weapons[i].SetActive (false);
+                }
+
+                currentWeapon = null;
+                weaponManager.weapons[2].SetActive (true);
+                currentWeapon = weaponManager.weapons[2].GetComponent<FPSWeapon> ();
+
+                playerAnimations.ChangeController (false);
+            }
         }
     }
 
