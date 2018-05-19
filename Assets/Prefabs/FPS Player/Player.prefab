@@ -955,6 +955,7 @@ GameObject:
   - component: {fileID: 4208426011517292}
   - component: {fileID: 95533609473873464}
   - component: {fileID: 82175323069450792}
+  - component: {fileID: 114182019289872086}
   m_Layer: 0
   m_Name: m16
   m_TagString: Untagged
@@ -1215,7 +1216,7 @@ GameObject:
   - component: {fileID: 4622259992730526}
   - component: {fileID: 33107676773576372}
   - component: {fileID: 23596465014002492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,7 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4705595111031342}
   - component: {fileID: 137738731349892688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: genSWAT_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,7 +1570,7 @@ GameObject:
   - component: {fileID: 4859900387869604}
   - component: {fileID: 33645949057318782}
   - component: {fileID: 23839001203205934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: m16_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1871,7 +1872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4529334397988636}
   - component: {fileID: 137889439629446500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: genSWAT_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1888,6 +1889,7 @@ GameObject:
   - component: {fileID: 4491409563897970}
   - component: {fileID: 95195734537763110}
   - component: {fileID: 82183158635376712}
+  - component: {fileID: 114496768922321034}
   m_Layer: 0
   m_Name: deagle
   m_TagString: Untagged
@@ -2057,6 +2059,7 @@ GameObject:
   - component: {fileID: 124695653493935224}
   - component: {fileID: 81382941333772910}
   - component: {fileID: 114047874793470764}
+  - component: {fileID: 114416269007723696}
   m_Layer: 0
   m_Name: FPS Camera
   m_TagString: MainCamera
@@ -2180,7 +2183,7 @@ GameObject:
   - component: {fileID: 4912795918405980}
   - component: {fileID: 33129178809076930}
   - component: {fileID: 23632686847014346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glock_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2347,6 +2350,7 @@ GameObject:
   - component: {fileID: 4643629423409762}
   - component: {fileID: 95253990249669864}
   - component: {fileID: 82439052336007308}
+  - component: {fileID: 114166778361259042}
   m_Layer: 0
   m_Name: glock
   m_TagString: Untagged
@@ -2531,7 +2535,7 @@ GameObject:
   - component: {fileID: 4630753147466256}
   - component: {fileID: 33433201415981644}
   - component: {fileID: 23426590172184124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3337,7 +3341,7 @@ GameObject:
   - component: {fileID: 4975840037314808}
   - component: {fileID: 33928539779175188}
   - component: {fileID: 23370945415154656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: m16_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3594,7 +3598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4398991386974462}
   - component: {fileID: 137801436949708310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: w_deagle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3958,7 +3962,7 @@ GameObject:
   - component: {fileID: 4544825415388022}
   - component: {fileID: 33865106066304806}
   - component: {fileID: 23292882022486370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glock_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4162,7 +4166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4604991720114202}
   - component: {fileID: 137963432980876656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: genSWAT_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4633,7 +4637,7 @@ GameObject:
   - component: {fileID: 4393782700068976}
   - component: {fileID: 33689075301883370}
   - component: {fileID: 23894890457646448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8996,7 +9000,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -9988,6 +9992,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: 1
+--- !u!114 &114166778361259042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522766594491618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be89d98d5be42f45880e5d231ee26ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: fde722301da517f429eaec7a286baea1, type: 3}
+  reloadClip: {fileID: 8300000, guid: dd37bc8e9362aae4fba8007a3287374d, type: 3}
+--- !u!114 &114182019289872086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243336689467864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be89d98d5be42f45880e5d231ee26ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: 93f9c3363bf680b46b725c07791f988a, type: 3}
+  reloadClip: {fileID: 8300000, guid: 0af0ffdf4a4735548b18d796fabdaf25, type: 3}
 --- !u!114 &114240987631442976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10003,6 +10033,34 @@ MonoBehaviour:
   - {fileID: 1174175715097774}
   - {fileID: 1916524614772382}
   - {fileID: 1883969083742850}
+--- !u!114 &114416269007723696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1467401010036952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53051e3d7a8d07548a18d93c41969943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 1445850467463384}
+  - {fileID: 1522766594491618}
+  - {fileID: 1243336689467864}
+--- !u!114 &114496768922321034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445850467463384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be89d98d5be42f45880e5d231ee26ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootClip: {fileID: 8300000, guid: fde722301da517f429eaec7a286baea1, type: 3}
+  reloadClip: {fileID: 8300000, guid: dd37bc8e9362aae4fba8007a3287374d, type: 3}
 --- !u!114 &114527834891810426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10046,6 +10104,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   weaponManager: {fileID: 114240987631442976}
+  handsWeaponManager: {fileID: 114416269007723696}
 --- !u!114 &114772339602771748
 MonoBehaviour:
   m_ObjectHideFlags: 1

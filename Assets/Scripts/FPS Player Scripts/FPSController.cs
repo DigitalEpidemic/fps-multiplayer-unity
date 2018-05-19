@@ -45,6 +45,10 @@ public class FPSController : MonoBehaviour {
     private float fireRate = 15f;
     private float nextTimeToFire = 0f;
 
+    [SerializeField]
+    private WeaponManager handsWeaponManager;
+    private FPSHandsWeapon currentHandsWeapon;
+
     void Start () {
         // Find is not optimal
         firstPerson_View = transform.Find ("FPS View").transform;
@@ -60,6 +64,9 @@ public class FPSController : MonoBehaviour {
 
         weaponManager.weapons[0].SetActive (true);
         currentWeapon = weaponManager.weapons[0].GetComponent<FPSWeapon> ();
+
+        handsWeaponManager.weapons[0].SetActive (true);
+        currentHandsWeapon = handsWeaponManager.weapons[0].GetComponent<FPSHandsWeapon> ();
     }
 
     void Update () {
@@ -205,15 +212,28 @@ public class FPSController : MonoBehaviour {
             }
 
             currentWeapon.Shoot ();
+            currentHandsWeapon.Shoot ();
         }
 
         if (Input.GetKeyDown (KeyCode.R)) {
             playerAnimations.Reload ();
+            currentHandsWeapon.Reload ();
         }
     }
 
     void SelectWeapon () {
         if (Input.GetKeyDown (KeyCode.Alpha1)) {
+
+            if (!handsWeaponManager.weapons[0].activeInHierarchy) {
+                for (int i = 0; i < handsWeaponManager.weapons.Length; i++) {
+                    handsWeaponManager.weapons[i].SetActive (false);
+                }
+
+                currentHandsWeapon = null;
+                handsWeaponManager.weapons[0].SetActive (true);
+                currentHandsWeapon = handsWeaponManager.weapons[0].GetComponent<FPSHandsWeapon> ();
+            }
+
             if (!weaponManager.weapons[0].activeInHierarchy) {
                 for (int i = 0; i < weaponManager.weapons.Length; i++) {
                     weaponManager.weapons[i].SetActive (false);
@@ -228,6 +248,17 @@ public class FPSController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown (KeyCode.Alpha2)) {
+
+            if (!handsWeaponManager.weapons[1].activeInHierarchy) {
+                for (int i = 0; i < handsWeaponManager.weapons.Length; i++) {
+                    handsWeaponManager.weapons[i].SetActive (false);
+                }
+
+                currentHandsWeapon = null;
+                handsWeaponManager.weapons[1].SetActive (true);
+                currentHandsWeapon = handsWeaponManager.weapons[1].GetComponent<FPSHandsWeapon> ();
+            }
+
             if (!weaponManager.weapons[1].activeInHierarchy) {
                 for (int i = 0; i < weaponManager.weapons.Length; i++) {
                     weaponManager.weapons[i].SetActive (false);
@@ -242,6 +273,17 @@ public class FPSController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown (KeyCode.Alpha3)) {
+
+            if (!handsWeaponManager.weapons[2].activeInHierarchy) {
+                for (int i = 0; i < handsWeaponManager.weapons.Length; i++) {
+                    handsWeaponManager.weapons[i].SetActive (false);
+                }
+
+                currentHandsWeapon = null;
+                handsWeaponManager.weapons[2].SetActive (true);
+                currentHandsWeapon = handsWeaponManager.weapons[2].GetComponent<FPSHandsWeapon> ();
+            }
+
             if (!weaponManager.weapons[2].activeInHierarchy) {
                 for (int i = 0; i < weaponManager.weapons.Length; i++) {
                     weaponManager.weapons[i].SetActive (false);
