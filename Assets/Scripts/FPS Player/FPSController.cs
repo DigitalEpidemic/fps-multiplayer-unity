@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class FPSController : MonoBehaviour {
+public class FPSController : NetworkBehaviour {
 
     private Transform firstPerson_View;
     private Transform firstPerson_Camera;
@@ -70,6 +71,14 @@ public class FPSController : MonoBehaviour {
     }
 
     void Update () {
+
+        // If you are not the local player
+        // Not running on own computer
+        if (!isLocalPlayer) {
+            // Don't execute code below return
+            return;
+        }
+
         PlayerMovement ();
         SelectWeapon ();
     }

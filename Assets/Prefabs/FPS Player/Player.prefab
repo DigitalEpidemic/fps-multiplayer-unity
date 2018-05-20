@@ -1247,7 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4705595111031342}
   - component: {fileID: 137738731349892688}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: genSWAT_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1376,6 +1376,7 @@ GameObject:
   - component: {fileID: 114553203598096416}
   - component: {fileID: 114196766184084500}
   - component: {fileID: 114157725435915304}
+  - component: {fileID: 114961024506651650}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1875,7 +1876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4529334397988636}
   - component: {fileID: 137889439629446500}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: genSWAT_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2060,7 +2061,6 @@ GameObject:
   - component: {fileID: 4683801481614970}
   - component: {fileID: 20061581716493828}
   - component: {fileID: 124695653493935224}
-  - component: {fileID: 81382941333772910}
   - component: {fileID: 114047874793470764}
   - component: {fileID: 114416269007723696}
   m_Layer: 0
@@ -4169,7 +4169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4604991720114202}
   - component: {fileID: 137963432980876656}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: genSWAT_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9589,13 +9589,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598837970307940}
   m_Mesh: {fileID: 4300000, guid: e0d90de014539bc46b7322dae18b3ca3, type: 3}
---- !u!81 &81382941333772910
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1467401010036952}
-  m_Enabled: 1
 --- !u!82 &82175323069450792
 AudioSource:
   m_ObjectHideFlags: 1
@@ -10189,6 +10182,27 @@ MonoBehaviour:
     type: 2}
   animController_DualHand: {fileID: 9100000, guid: 0770a54f266a24bc7b5bd0ee2d2b4f0a,
     type: 2}
+--- !u!114 &114961024506651650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330869912135466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 4
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!124 &124695653493935224
 Behaviour:
   m_ObjectHideFlags: 1
