@@ -55,6 +55,12 @@ public class FPSController : NetworkBehaviour {
     private Camera mainCam;
     public FPSMouseLook[] mouseLook;
 
+    //private Color32[] playerColors = new Color32[] {new Color32(0,44,255,1),
+    //new Color32(252,208,193,1), new Color32(0,0,0,1)};
+
+    public Material delta, swat;
+    public Renderer playerRenderer1, playerRenderer2, playerRenderer3;
+
     void Start () {
         // Find is not optimal
         firstPerson_View = transform.Find ("FPS View").transform;
@@ -119,6 +125,25 @@ public class FPSController : NetworkBehaviour {
         // Deactivates all FPS Cameras
         mainCam = transform.Find ("FPS View").Find ("FPS Camera").GetComponent<Camera> ();
         mainCam.gameObject.SetActive (false);
+
+        if (!isLocalPlayer) {
+            for (int i = 0; i < playerRenderer1.materials.Length; i++) {
+                //playerRenderer1.materials[i].color = playerColors[i];
+                //playerRenderer2.materials[i].color = playerColors[i];
+                //playerRenderer3.materials[i].color = playerColors[i];
+
+                // Players on server are set to delta skin
+                playerRenderer1.material = delta;
+                playerRenderer2.material = delta;
+                playerRenderer3.material = delta;
+            }
+        } else {
+            // Local player is set to swat skin
+            playerRenderer1.material = swat;
+            playerRenderer2.material = swat;
+            playerRenderer3.material = swat;
+        }
+
     }
 
     public override void OnStartLocalPlayer () {

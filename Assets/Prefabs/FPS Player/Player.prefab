@@ -10311,6 +10311,11 @@ MonoBehaviour:
   mouseLook:
   - {fileID: 114567094681755806}
   - {fileID: 114047874793470764}
+  delta: {fileID: 2100000, guid: 582bbb33c77b99e47bda259d7c1964fb, type: 2}
+  swat: {fileID: 2100000, guid: bf22b90f36414e04ba700d868ec6e639, type: 2}
+  playerRenderer1: {fileID: 137889439629446500}
+  playerRenderer2: {fileID: 137738731349892688}
+  playerRenderer3: {fileID: 137963432980876656}
 --- !u!114 &114772339602771748
 MonoBehaviour:
   m_ObjectHideFlags: 1
