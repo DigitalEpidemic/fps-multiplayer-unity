@@ -1404,12 +1404,13 @@ GameObject:
   - component: {fileID: 114663132052031528}
   - component: {fileID: 114778227001804130}
   - component: {fileID: 114196766184084500}
+  - component: {fileID: 114063405277564634}
   - component: {fileID: 114157725435915304}
   - component: {fileID: 114961024506651650}
   - component: {fileID: 114446086972794078}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10108,6 +10109,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: 1
+--- !u!114 &114063405277564634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1330869912135466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8264437d45c6440ae8735db53e4f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114157725435915304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10178,6 +10191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   concreteImpact: {fileID: 100002, guid: 2b4ffdf4a64f87d4ca3c0de925e6d343, type: 2}
+  bloodImpact: {fileID: 100006, guid: cb771650f86a58a46ab01616eef4650c, type: 2}
+  damageAmount: 5
 --- !u!114 &114240987631442976
 MonoBehaviour:
   m_ObjectHideFlags: 1

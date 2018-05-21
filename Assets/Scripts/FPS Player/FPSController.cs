@@ -121,6 +121,10 @@ public class FPSController : NetworkBehaviour {
         mainCam.gameObject.SetActive (false);
     }
 
+    public override void OnStartLocalPlayer () {
+        tag = "Player";
+    }
+
     void Update () {
 
         // Activates local FPS Camera
