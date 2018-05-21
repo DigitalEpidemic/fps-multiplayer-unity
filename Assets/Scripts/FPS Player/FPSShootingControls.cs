@@ -14,7 +14,7 @@ public class FPSShootingControls : MonoBehaviour {
     private GameObject concreteImpact;
 
     void Start () {
-        mainCam = Camera.main;
+        mainCam = transform.Find ("FPS View").Find ("FPS Camera").GetComponent<Camera> ();
     }
 
     void Update () {
